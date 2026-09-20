@@ -1,70 +1,74 @@
-# Elytra hud
+> **Language:** Русский · [English](README.en.md)
+
+# Simple Elytra Hud Extended (Minecraft 1.21.4) 
+
+> **Добавлено в этой версии:** поддержка элитр из кастомных модов. HUD теперь работает не только с ванильными элитрами (`minecraft:elytra`), но и с любыми предметами-глидерами из модов (например, незеритовые элитры, элитры из `Elytra Reborn`, `Elytra Revamped` и аналогичных) благодаря проверке через `LivingEntity#canGlideWith`.
+
 ![Flying with an elytra with the hud up](https://cdn.modrinth.com/data/cached_images/050acab9f4ab75f1117c5357e6914d76c1707a8e.png)
 
-## Information
-Elytra Hud add a new way to fly with your elytra.
-It adds important information on the screen while flying.
-Use this mod for your long flights to get the most out of the trip
+## Информация
 
-## HUD:s features
+Elytra Hud добавляет новый способ полёта с вашей элитрой.
+Он выводит важную информацию на экран во время полёта.
+Используйте этот мод для долгих перелётов, чтобы получить максимум от путешествия.
 
-> #### Left side
-> We have three text fields, in order they are
-> 1. Your [pitch angle](https://minecraft.wiki/w/Elytra#Flying).
-> 2. Speed in km/h
-> 3. Coordinates 
-> #### Middle
-> In the middle you have the status of your Elytra. 
-> 
-> To the right of that you have up and down arrows.
-> If you are flying up, it will light upp; that's the same for going down.
-> #### Right side
-> On the right side you have a compass. This is not a normal compass, because it will always point towards the direction you are going
-# Config
-The mod requires [YetAnotherConfigLib](https://modrinth.com/mod/yacl) and [modmenu](https://modrinth.com/mod/modmenu).
+## Возможности HUD
 
-> #### Config Options
-> They are in order in the config menu.
-> - Hud's visibility — If you want to turn of the HUD's visibility
-> - Hud's delay — The time it takes for the hud to appear.
-> - Elytra status — You can turn of the damage level for elytra in the HUD
-> - Elyta coordinates — If you want, you can disable coordinates in the HUD
-> - Speed measurement — There is km/h (default), m/s or mph available
+> #### Левая часть
+> У нас есть три текстовых поля, по порядку:
+> 1. Ваш [угол наклона](https://minecraft.wiki/w/Elytra#Flying).
+> 2. Скорость в км/ч
+> 3. Координаты
+> #### Середина
+> В центре находится статус вашей элитры.
+>
+> Справа от него — стрелки вверх и вниз.
+> Если вы летите вверх, она загорается; то же самое при полёте вниз.
+> #### Правая часть
+> Справа находится компас. Это не обычный компас, потому что он всегда указывает в направлении вашего движения.
 
-# Looking for a server?
-Get BisectHosting and save 25% off for new customers using code Lukas at checkout.
-Thanks for your support — it helps me develop this and other mods I make!
-#ad
-[![Support me](https://www.bisecthosting.com/partners/custom-banners/ca44e941-2306-414c-8c65-7c50bc6fcf48.webp)](https://bisecthosting.com/Lukas)
+# Конфигурация
 
-# How to download?
-### With launcher (recommended)
-1. Download [Modrinth launcher](https://modrinth.com/app) (more user-friendly) or [Prism launcher](https://prismlauncher.org/) (A lot more options but harder to use for someone new)
-2. Create a profile for the minecraft version you want and make sure its fabric. Check so the mod has compatibility with that version first.
-3. You can download the mod in the launcher
-   4. (Modrinth launcher) In your profile in the right corner, press "Add content" and search up "Simple Elytra Hud" and press "install."
-   5. (Prism launcher) Go in to the profile by pressing "edit" and then you want and press "Mods" and then "Download mods". Under the Modrinth tab write "Simple Elytra Hud". Mark for download and then press confirm.
-   6. You need modmenu and YetAnotherConfigLib. Download it in the same way!
-4. Now you can start your profile and enjoy!
-### Without launcher
-1. You can download the mod here on [Modrinth](https://modrinth.com/mod/simpleelytrahud/versions) or [Github](https://github.com/lukasabbe/transport-hud/releases)
-2. You also need to download [Fabric API](https://modrinth.com/mod/fabric-api/versions)
-3. You also need [Mod Menu](https://modrinth.com/mod/modmenu) and [YetAnotherConfigLib](https://modrinth.com/mod/yacl) (Versions bellow and 1.6 use and its optional [cloth config](https://modrinth.com/mod/cloth-config))
-4. You also need [fabric](https://fabricmc.net/use/installer/) and this will automatically create a profile for you
-5. Put the mods in %appdata%/.minecraft/mods
-6. Now you can play Minecraft
+Моду требуется [YetAnotherConfigLib](https://modrinth.com/mod/yacl) и [modmenu](https://modrinth.com/mod/modmenu).
 
-# Open source
-Nearly all my mods are opensource and under MIT.
-Feel free to use however you want.
-If you want to help the development, check out the [GitHub](https://github.com/lukasabbe/transport-hud)!
+> #### Параметры конфигурации
+> Они расположены по порядку в меню конфигурации.
+> - Видимость HUD — если хотите отключить отображение HUD
+> - Задержка HUD — время, через которое появляется HUD
+> - Статус элитры — можно отключить уровень повреждения элитры в HUD
+> - Координаты элитры — при желании можно отключить координаты в HUD
+> - Измерение скорости — доступны км/ч (по умолчанию), м/с или миль/ч
 
-If you found a bug, please report it [here](https://github.com/lukasabbe/transport-hud/issues)!
+# Как скачать?
 
-# Inspiration and credit 
-- The mod is inspired by [Boat HUD](https://modrinth.com/mod/boathud)
-- Lukasabbe has coded
-- Lemonixi made the graphics.
-- Smurre came up with the idea
+### С лаунчером (рекомендуется)
+1. Скачайте [Modrinth launcher](https://modrinth.com/app) (более удобный) или [Prism launcher](https://prismlauncher.org/) (больше опций, но сложнее для новичков)
+2. Создайте профиль для нужной версии Minecraft и убедитесь, что он на Fabric. Сначала проверьте совместимость мода с этой версией.
+3. Мод можно скачать в лаунчере
+   4. (Modrinth launcher) В профиле в правом углу нажмите «Add content» и найдите «Simple Elytra Hud» и нажмите «install».
+   5. (Prism launcher) Зайдите в профиль, нажав «edit», затем «Mods» и «Download mods». На вкладке Modrinth напишите «Simple Elytra Hud». Отметьте для загрузки и нажмите confirm.
+   6. Вам нужны modmenu и YetAnotherConfigLib. Скачайте их так же!
+4. Теперь можно запускать профиль и наслаждаться!
+### Без лаунчера
+1. Мод можно скачать здесь на [Modrinth](https://modrinth.com/mod/simpleelytrahud/versions) или [Github](https://github.com/lukasabbe/transport-hud/releases)
+2. Также понадобится [Fabric API](https://modrinth.com/mod/fabric-api/versions)
+3. Также понадобятся [Mod Menu](https://modrinth.com/mod/modmenu) и [YetAnotherConfigLib](https://modrinth.com/mod/yacl) (в версиях ниже 1.6 и опциональном [cloth config](https://modrinth.com/mod/cloth-config))
+4. Также понадобится [fabric](https://fabricmc.net/use/installer/), и он автоматически создаст профиль
+5. Положите моды в %appdata%/.minecraft/mods
+6. Теперь можно играть в Minecraft
 
-Thank you all for downloading the mod!
+# Открытый исходный код
+
+Почти все мои моды с открытым исходным кодом и под лицензией MIT.
+Не стесняйтесь использовать их как угодно.
+Если хотите помочь разработке, загляните в [GitHub](https://github.com/lukasabbe/transport-hud)!
+
+Если вы нашли ошибку, пожалуйста, сообщите о ней [здесь](https://github.com/lukasabbe/transport-hud/issues)!
+
+# Вдохновение и авторы
+- Мод вдохновлён [Boat HUD](https://modrinth.com/mod/boathud)
+- Код написал Lukasabbe
+- Графику сделал Lemonixi
+- Идею предложил Smurre
+
+Спасибо всем за скачивание мода!
