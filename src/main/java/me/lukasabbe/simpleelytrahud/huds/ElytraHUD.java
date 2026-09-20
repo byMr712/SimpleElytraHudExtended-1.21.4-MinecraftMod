@@ -119,6 +119,7 @@ public class ElytraHUD {
 
     private void drawElytraStatus(DrawContext context, int posX, int posY, int size){
         drawScaledItem(context,posX-3,posY-size-7,Items.ELYTRA,0.5f);
+        if(data.maxElytraStatus <= 0) return;
         float dmgPercentage = (1 - (data.elytraStatus / data.maxElytraStatus));
         final int statusBar = posY - (int)(dmgPercentage * size);
         context.fill(posX, posY, posX+2, statusBar, ColorHelper.withAlpha(0xFF,data.elytraDmgColor));
