@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Simple Elytra Hud",
   "description": "An elytra HUD mod",
-  "authors": ["Lukasabbe"],
+  "authors": ["Lukasabbe", "byMr712"],
   "contact": {
     "repo": "https://github.com/lukasabbe/simple-elytra-hud"
   },
