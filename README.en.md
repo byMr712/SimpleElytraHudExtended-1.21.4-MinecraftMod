@@ -50,10 +50,9 @@
 
 1. Download the latest release from [GitHub Releases](https://github.com/byMr712/SimpleElytraHudExtended-1.21.4-MinecraftMod/releases).
 2. Requires:
-   - [Fabric Loader](https://fabricmc.net/) (Minecraft 1.21.4)
    - [Fabric API](https://modrinth.com/mod/fabric-api)
    - [YetAnotherConfigLib (YACL)](https://modrinth.com/mod/yacl)
-   - [Mod Menu](https://modrinth.com/mod/modmenu) (recommended)
+   - [Mod Menu](https://modrinth.com/mod/modmenu) (optional)
 3. Place the `.jar` file into your `mods` folder.
 4. Launch the game.
 
