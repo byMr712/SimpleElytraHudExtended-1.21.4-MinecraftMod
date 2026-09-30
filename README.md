@@ -1,74 +1,79 @@
 > **Language:** Русский · [English](README.en.md)
 
-# Simple Elytra Hud Extended (Minecraft 1.21.4) 
+# Simple Elytra Hud Extended (Minecraft 1.21.4)
+
+![Java 21](https://img.shields.io/badge/Java-21-blue.svg)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.4-blue.svg)
+![Fabric](https://img.shields.io/badge/Loader-Fabric-blue.svg)
+![ModMenu](https://img.shields.io/badge/ModMenu-Supported-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 > **Добавлено в этой версии:** поддержка элитр из кастомных модов. HUD теперь работает не только с ванильными элитрами (`minecraft:elytra`), но и с любыми предметами-глидерами из модов (например, незеритовые элитры, элитры из `Elytra Reborn`, `Elytra Revamped` и аналогичных) благодаря проверке через `LivingEntity#canGlideWith`.
 
-![Flying with an elytra with the hud up](https://cdn.modrinth.com/data/cached_images/050acab9f4ab75f1117c5357e6914d76c1707a8e.png)
+---
 
-## Информация
+## О моде
 
-Elytra Hud добавляет новый способ полёта с вашей элитрой.
-Он выводит важную информацию на экран во время полёта.
-Используйте этот мод для долгих перелётов, чтобы получить максимум от путешествия.
+**Elytra Hud** добавляет новый способ полёта с вашей элитрой, выводя ключевую информацию о полёте на экран в реальном времени.
+
+---
+
+## Галерея интерфейса
+
+| Полет с HUD в реальном времени | Элементы интерфейса |
+|:---:|:---:|
+| ![Полет с активным HUD](images/elytra_hud_flying.webp) | ![Внешний вид HUD](images/elytra_hud.png) |
+
+---
 
 ## Возможности HUD
 
-> #### Левая часть
-> У нас есть три текстовых поля, по порядку:
-> 1. Ваш [угол наклона](https://minecraft.wiki/w/Elytra#Flying).
-> 2. Скорость в км/ч
-> 3. Координаты
-> #### Середина
-> В центре находится статус вашей элитры.
->
-> Справа от него — стрелки вверх и вниз.
-> Если вы летите вверх, она загорается; то же самое при полёте вниз.
-> #### Правая часть
-> Справа находится компас. Это не обычный компас, потому что он всегда указывает в направлении вашего движения.
+- **Левая панель**:
+  1. Текущий угол наклона (Pitch).
+  2. Скорость полёта (км/ч, м/с или миль/ч).
+  3. Текущие координаты игрока (X, Y, Z).
+- **Центральная панель**:
+  - Графическая шкала прочности элитры.
+  - Индикаторы направления (стрелки набора высоты и пикирования).
+- **Правая панель**:
+  - Динамический компас, указывающий точное направление движения.
+- **Параметры конфигурации**:
+  - Видимость HUD (включение/отключение).
+  - Задержка появления HUD после старта полёта.
+  - Отображение прочности элитры.
+  - Отображение координат.
+  - Выбор единиц измерения скорости (км/ч, м/с, миль/ч).
 
-# Конфигурация
+---
 
-Моду требуется [YetAnotherConfigLib](https://modrinth.com/mod/yacl) и [modmenu](https://modrinth.com/mod/modmenu).
+## Установка
 
-> #### Параметры конфигурации
-> Они расположены по порядку в меню конфигурации.
-> - Видимость HUD — если хотите отключить отображение HUD
-> - Задержка HUD — время, через которое появляется HUD
-> - Статус элитры — можно отключить уровень повреждения элитры в HUD
-> - Координаты элитры — при желании можно отключить координаты в HUD
-> - Измерение скорости — доступны км/ч (по умолчанию), м/с или миль/ч
+1. Скачайте последнюю версию со страницы [GitHub Releases](https://github.com/byMr712/SimpleElytraHudExtended-1.21.4-MinecraftMod/releases).
+2. Требуются:
+   - [Fabric Loader](https://fabricmc.net/) (Minecraft 1.21.4)
+   - [Fabric API](https://modrinth.com/mod/fabric-api)
+   - [YetAnotherConfigLib (YACL)](https://modrinth.com/mod/yacl)
+   - [Mod Menu](https://modrinth.com/mod/modmenu) (рекомендуется)
+3. Поместите `.jar` файл в папку `mods`.
+4. Запустите игру.
 
-# Как скачать?
+---
 
-### С лаунчером (рекомендуется)
-1. Скачайте [Modrinth launcher](https://modrinth.com/app) (более удобный) или [Prism launcher](https://prismlauncher.org/) (больше опций, но сложнее для новичков)
-2. Создайте профиль для нужной версии Minecraft и убедитесь, что он на Fabric. Сначала проверьте совместимость мода с этой версией.
-3. Мод можно скачать в лаунчере
-   4. (Modrinth launcher) В профиле в правом углу нажмите «Add content» и найдите «Simple Elytra Hud» и нажмите «install».
-   5. (Prism launcher) Зайдите в профиль, нажав «edit», затем «Mods» и «Download mods». На вкладке Modrinth напишите «Simple Elytra Hud». Отметьте для загрузки и нажмите confirm.
-   6. Вам нужны modmenu и YetAnotherConfigLib. Скачайте их так же!
-4. Теперь можно запускать профиль и наслаждаться!
-### Без лаунчера
-1. Мод можно скачать здесь на [Modrinth](https://modrinth.com/mod/simpleelytrahud/versions) или [Github](https://github.com/lukasabbe/transport-hud/releases)
-2. Также понадобится [Fabric API](https://modrinth.com/mod/fabric-api/versions)
-3. Также понадобятся [Mod Menu](https://modrinth.com/mod/modmenu) и [YetAnotherConfigLib](https://modrinth.com/mod/yacl) (в версиях ниже 1.6 и опциональном [cloth config](https://modrinth.com/mod/cloth-config))
-4. Также понадобится [fabric](https://fabricmc.net/use/installer/), и он автоматически создаст профиль
-5. Положите моды в %appdata%/.minecraft/mods
-6. Теперь можно играть в Minecraft
+## Сборка
 
-# Открытый исходный код
+1. Требуется Java 21 и Fabric Loader для Minecraft 1.21.4.
+2. Для сборки выполните:
+   ```bash
+   ./gradlew build
+   ```
+3. Собранный файл находится в `build/libs/SimpleElytraHudExtended-1.21.4-byMr712.jar`.
 
-Почти все мои моды с открытым исходным кодом и под лицензией MIT.
-Не стесняйтесь использовать их как угодно.
-Если хотите помочь разработке, загляните в [GitHub](https://github.com/lukasabbe/transport-hud)!
+---
 
-Если вы нашли ошибку, пожалуйста, сообщите о ней [здесь](https://github.com/lukasabbe/transport-hud/issues)!
+## Авторы и лицензия
 
-# Вдохновение и авторы
-- Мод вдохновлён [Boat HUD](https://modrinth.com/mod/boathud)
-- Код написал Lukasabbe
-- Графику сделал Lemonixi
-- Идею предложил Smurre
-
-Спасибо всем за скачивание мода!
+- Оригинальный код: [Lukasabbe](https://github.com/lukasabbe) ([Simple Elytra Hud](https://modrinth.com/mod/simpleelytrahud)).
+- Модификация и расширение для 1.21.4: [Mr712](https://github.com/byMr712).
+- Графика: Lemonixi.
+- Идея: Smurre.
+- Распространяется под лицензией [MIT License](LICENSE).

@@ -2,73 +2,78 @@
 
 # Simple Elytra Hud Extended (Minecraft 1.21.4)
 
-> **Added in this version:** support for elytra from custom mods. The HUD now works not only with vanilla elytra (`minecraft:elytra`), but with any glider items from mods (e.g. netherite elytra, elytra from `Elytra Reborn`, `Elytra Revamped` and similar) thanks to the check through `LivingEntity#canGlideWith`.
+![Java 21](https://img.shields.io/badge/Java-21-blue.svg)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.4-blue.svg)
+![Fabric](https://img.shields.io/badge/Loader-Fabric-blue.svg)
+![ModMenu](https://img.shields.io/badge/ModMenu-Supported-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-![Flying with an elytra with the hud up](https://cdn.modrinth.com/data/cached_images/050acab9f4ab75f1117c5357e6914d76c1707a8e.png)
+> **Added in this version:** support for custom modded elytra. The HUD now works not only with vanilla elytra (`minecraft:elytra`), but also with any glider items from mods (e.g. netherite elytra, elytra from `Elytra Reborn`, `Elytra Revamped` and similar) thanks to the check through `LivingEntity#canGlideWith`.
 
-## Information
+---
 
-Elytra Hud adds a new way to fly with your elytra.
-It adds important information on the screen while flying.
-Use this mod for your long flights to get the most out of the trip.
+## About
 
-## HUD:s features
+**Elytra Hud** adds a new way to fly with your elytra, displaying essential flight telemetry on your screen in real time.
 
-> #### Left side
-> We have three text fields, in order they are
-> 1. Your [pitch angle](https://minecraft.wiki/w/Elytra#Flying).
-> 2. Speed in km/h
-> 3. Coordinates
-> #### Middle
-> In the middle you have the status of your Elytra.
->
-> To the right of that you have up and down arrows.
-> If you are flying up, it will light up; that's the same for going down.
-> #### Right side
-> On the right side you have a compass. This is not a normal compass, because it will always point towards the direction you are going.
+---
 
-# Config
+## Interface Gallery
 
-The mod requires [YetAnotherConfigLib](https://modrinth.com/mod/yacl) and [modmenu](https://modrinth.com/mod/modmenu).
+| Real-Time Flight HUD | HUD Interface Elements |
+|:---:|:---:|
+| ![Flight HUD](images/elytra_hud_flying.webp) | ![HUD appearance](images/elytra_hud.png) |
 
-> #### Config Options
-> They are in order in the config menu.
-> - Hud's visibility — If you want to turn off the HUD's visibility
-> - Hud's delay — The time it takes for the hud to appear.
-> - Elytra status — You can turn off the damage level for elytra in the HUD
-> - Elytra coordinates — If you want, you can disable coordinates in the HUD
-> - Speed measurement — There is km/h (default), m/s or mph available
+---
 
-# How to download?
+## HUD Features
 
-### With launcher (recommended)
-1. Download [Modrinth launcher](https://modrinth.com/app) (more user-friendly) or [Prism launcher](https://prismlauncher.org/) (A lot more options but harder to use for someone new)
-2. Create a profile for the minecraft version you want and make sure its fabric. Check so the mod has compatibility with that version first.
-3. You can download the mod in the launcher
-   4. (Modrinth launcher) In your profile in the right corner, press "Add content" and search up "Simple Elytra Hud" and press "install."
-   5. (Prism launcher) Go in to the profile by pressing "edit" and then you want and press "Mods" and then "Download mods". Under the Modrinth tab write "Simple Elytra Hud". Mark for download and then press confirm.
-   6. You need modmenu and YetAnotherConfigLib. Download it in the same way!
-4. Now you can start your profile and enjoy!
-### Without launcher
-1. You can download the mod here on [Modrinth](https://modrinth.com/mod/simpleelytrahud/versions) or [Github](https://github.com/lukasabbe/transport-hud/releases)
-2. You also need to download [Fabric API](https://modrinth.com/mod/fabric-api/versions)
-3. You also need [Mod Menu](https://modrinth.com/mod/modmenu) and [YetAnotherConfigLib](https://modrinth.com/mod/yacl) (Versions below 1.6 uses an optional [cloth config](https://modrinth.com/mod/cloth-config))
-4. You also need [fabric](https://fabricmc.net/use/installer/) and this will automatically create a profile for you
-5. Put the mods in %appdata%/.minecraft/mods
-6. Now you can play Minecraft
+- **Left Panel**:
+  1. Current pitch angle.
+  2. Flight speed (km/h, m/s, or mph).
+  3. Current player coordinates (X, Y, Z).
+- **Middle Panel**:
+  - Graphical durability gauge for your elytra.
+  - Climb and dive indicator arrows.
+- **Right Panel**:
+  - Dynamic compass always pointing in your movement direction.
+- **Configuration Options**:
+  - HUD Visibility (toggle on/off).
+  - HUD Delay before appearing.
+  - Elytra Durability bar toggle.
+  - Coordinate display toggle.
+  - Speed unit selection (km/h, m/s, mph).
 
-# Open source
+---
 
-Nearly all my mods are opensource and under MIT.
-Feel free to use however you want.
-If you want to help the development, check out the [GitHub](https://github.com/lukasabbe/transport-hud)!
+## Installation
 
-If you found a bug, please report it [here](https://github.com/lukasabbe/transport-hud/issues)!
+1. Download the latest release from [GitHub Releases](https://github.com/byMr712/SimpleElytraHudExtended-1.21.4-MinecraftMod/releases).
+2. Requires:
+   - [Fabric Loader](https://fabricmc.net/) (Minecraft 1.21.4)
+   - [Fabric API](https://modrinth.com/mod/fabric-api)
+   - [YetAnotherConfigLib (YACL)](https://modrinth.com/mod/yacl)
+   - [Mod Menu](https://modrinth.com/mod/modmenu) (recommended)
+3. Place the `.jar` file into your `mods` folder.
+4. Launch the game.
 
-# Inspiration and credit
-- The mod is inspired by [Boat HUD](https://modrinth.com/mod/boathud)
-- Lukasabbe has coded
-- Lemonixi made the graphics.
-- Smurre came up with the idea
+---
 
-Thank you all for downloading the mod!
+## Building
+
+1. Requires Java 21 and Fabric Loader for Minecraft 1.21.4.
+2. To build the project, run:
+   ```bash
+   ./gradlew build
+   ```
+3. The built jar file will be located at `build/libs/SimpleElytraHudExtended-1.21.4-byMr712.jar`.
+
+---
+
+## Credits & License
+
+- Original Code: [Lukasabbe](https://github.com/lukasabbe) ([Simple Elytra Hud](https://modrinth.com/mod/simpleelytrahud)).
+- Modified and extended for 1.21.4 by: [Mr712](https://github.com/byMr712).
+- Graphics: Lemonixi.
+- Concept: Smurre.
+- Distributed under the [MIT License](LICENSE).

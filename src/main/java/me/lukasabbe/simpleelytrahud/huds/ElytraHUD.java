@@ -11,6 +11,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
@@ -21,6 +22,7 @@ import net.minecraft.util.math.Vec3d;
  * Elytra rendering HUD
  */
 public class ElytraHUD {
+    private static final ItemStack ELYTRA_STACK = new ItemStack(Items.ELYTRA);
     /**
      * Elytra data that has all necessary data to render HUD
      */
@@ -55,7 +57,7 @@ public class ElytraHUD {
         drawContext.drawTexture(RenderLayer::getGuiTextured,elytraHudAssets,x-50,y-60,2,44,100,36,100,36,256,256);
 
         //draws speed and pitch
-        type(drawContext,String.format("%d°",(int)data.pitch),x-45, y-55,0xFFFFFF,client,0.6f);
+        type(drawContext, ((int) data.pitch) + "°", x-45, y-55, 0xFFFFFF, client, 0.6f);
         typeSpeed(drawContext, x,y,0xFFFFFF);
 
         //draw cords
@@ -78,7 +80,7 @@ public class ElytraHUD {
     }
 
     private void drawCords(DrawContext ctx, Vec3d pos, int x, int y, MinecraftClient client){
-        String cordsText = String.format("%d:%d:%d", (int)pos.x, (int)pos.y, (int)pos.z);
+        String cordsText = ((int) pos.x) + ":" + ((int) pos.y) + ":" + ((int) pos.z);
         if(cordsText.length() > 10){
             type(ctx,cordsText,x,y,0xFFFFFF, client, ((float) (10 * 7 - ((cordsText.length()-4)*2)) / 100));
         }else{
@@ -118,7 +120,7 @@ public class ElytraHUD {
     }
 
     private void drawElytraStatus(DrawContext context, int posX, int posY, int size){
-        drawScaledItem(context,posX-3,posY-size-7,Items.ELYTRA,0.5f);
+        drawScaledItem(context,posX-3,posY-size-7,ELYTRA_STACK,0.5f);
         if(data.maxElytraStatus <= 0) return;
         float dmgPercentage = (1 - (data.elytraStatus / data.maxElytraStatus));
         final int statusBar = posY - (int)(dmgPercentage * size);
@@ -127,13 +129,13 @@ public class ElytraHUD {
         if(dmgPercentageLeft == 0) return;
         context.fill(posX, statusBar, posX+2,statusBar - (int)(dmgPercentageLeft*size), 0xFF3D3D3D);
     }
-    private void drawScaledItem(DrawContext context, int poxX, int posY, Item item, float scaled){
+    private void drawScaledItem(DrawContext context, int poxX, int posY, ItemStack itemStack, float scaled){
         MatrixStack stack = context.getMatrices();
         stack.push();
         stack.translate(poxX,posY,0);
         stack.scale(scaled,scaled,scaled);
         stack.translate(-poxX,-posY,0);
-        context.drawItem(item.getDefaultStack(),poxX, posY);
+        context.drawItem(itemStack,poxX, posY);
         stack.pop();
     }
     private void type(DrawContext graphics, String text, int centerX, int y, int color, MinecraftClient client, float scaled) {
